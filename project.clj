@@ -1,8 +1,8 @@
-(defproject event-data-twitter-compliance-patcher "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+(defproject event-data-twitter-compliance-patcher "0.1.0"
+  :description "Event Data Twitter Compliance Stream Patcher"
+  :url "http://eventdata.crossref.org"
+  :license {:name "The MIT License (MIT)"
+            :url "https://opensource.org/licenses/MIT"}
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojure "1.8.0"]
                  [event-data-common "0.1.25"]

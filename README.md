@@ -1,20 +1,23 @@
 # Twitter Compliance Patcher
 
-Take the result of Twitter compliance checking (e.g. [Twitter Compliance Logger](https://github.com/crossref/event-data-twitter-compliance-logger) with [Reorts](https://github.com/crossref/event-data-reports) and (Twitter Spot Check](https://github.com/crossref/event-data-twitter-spot-check) and patch Events.
+Apply compliance checks to Twitter Events in CED and patches Events that mention deleted Tweets.
 
-Accepts a list of Event IDs and sends those redacted IDs back to the Event Bus.
+In `from-reports` mode runs automatically to monitor the Twitter compliance logs, look up Events that mention those tweets and patch them.
 
 ## Use
 
-### Local text file
-
-Supply a local text file with newline-delmited Events.
-
-    lein run  from-local-text-file «filename»
-
 ### Event Data Reports
 
-Consume Event Data Reports of deleted Event IDs. TODO.
+Consume the log (which is stored in S3). Loops, automatic.
+
+    lein run from-log
+
+
+### Local text file
+
+For manual use. Supply a local text file with newline-delmited Events.
+
+    lein run  from-local-text-file «filename»
 
 ## Config
 
@@ -23,9 +26,9 @@ Consume Event Data Reports of deleted Event IDs. TODO.
 | `S3_KEY`                 |                                                   |
 | `S3_SECRET`              |                                                   |
 | `JWT_TOKEN`              | Token that has permission to edit Twitter Events. |
-| `EVIDENCE_BUCKET_NAME`   | Bucket where Twitter IDs are stored.              |
-| `EVIDENCE_BUCKET_REGION` |                                                   |
 | `EVENT_BUS_URL_BASE`     |                                                   |
+| `EVIDENCE_BASE`          | https://evidence.eventdata.crossref.org           |
+| `QUERY_API_BASE`         | https://query.eventdata.crossref.org              |
  
 ## License
 
