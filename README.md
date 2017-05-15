@@ -23,11 +23,12 @@ For manual use. Supply a local text file with newline-delmited Events.
 
 | Environment variable     |                                                   |
 |--------------------------|---------------------------------------------------|
-| `S3_KEY`                 |                                                   |
+| `S3_KEY`                 | Credentials for Evidence bucket.                  |
 | `S3_SECRET`              |                                                   |
+| `S3_BUCKET_NAME`         |                                                   |
+| `S3_REGION_NAME`         |                                                   |
 | `JWT_TOKEN`              | Token that has permission to edit Twitter Events. |
 | `EVENT_BUS_URL_BASE`     |                                                   |
-| `EVIDENCE_BASE`          | https://evidence.eventdata.crossref.org           |
 | `QUERY_API_BASE`         | https://query.eventdata.crossref.org              |
  
 ## License

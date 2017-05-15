@@ -23,7 +23,7 @@
   "https://evidence.eventdata.crossref.org/announcements/2017-05-08T08-41-00Z-CED-9.json")
 
 (def storage
-  (delay (s3/build (:s3-key env) (:s3-secret env) (:report-region-name env) (:report-bucket-name env))))
+  (delay (s3/build (:s3-key env) (:s3-secret env) (:s3-region-name env) (:s3-bucket-name env))))
 
 (defn patch-event
   "Update the given Event structure."
