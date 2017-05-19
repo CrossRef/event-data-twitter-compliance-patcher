@@ -1,4 +1,4 @@
-(defproject event-data-twitter-compliance-patcher "0.1.0"
+(defproject event-data-twitter-compliance-patcher "0.1.1"
   :description "Event Data Twitter Compliance Stream Patcher"
   :url "http://eventdata.crossref.org"
   :license {:name "The MIT License (MIT)"
